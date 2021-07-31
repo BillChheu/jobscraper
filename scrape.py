@@ -6,10 +6,10 @@ prev = ""
 # initalization of comment to be different than prev for first run
 comments = "comments"
 p = 1
-
+link = input("Enter current HackerNews job posting link: ")
 while (prev != comments):
 
-    page = requests.get("https://news.ycombinator.com/item?id=27699704&p=%d" % p)
+    page = requests.get("%s&p=%d" % (link, p))
     print("Page %d" % p)
     p += 1
 
